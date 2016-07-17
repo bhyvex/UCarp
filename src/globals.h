@@ -29,6 +29,7 @@ GLOBAL0(signed char no_syslog);
 GLOBAL0(signed char daemonize);
 GLOBAL0(signed char ignoreifstate);
 GLOBAL0(signed char no_mcast);
+GLOBAL0(signed char no_spoof);
 GLOBAL(int syslog_facility, DEFAULT_FACILITY);
 GLOBAL0(char *vaddr_arg);
 GLOBAL0(char *xparam);

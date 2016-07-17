@@ -43,6 +43,7 @@ static void usage(void)
         "--daemonize (-B): run in background\n"
         "--ignoreifstate (-S): ignore interface state (down, no carrier)\n"
         "--nomcast (-M): use broadcast (instead of multicast) advertisements\n"
+        "--nospoof (-F): do not spoof source MAC address\n"
         "--facility=<facility> (-f): set syslog facility (default=daemon)\n"
         "--xparam=<value> (-x): extra parameter to send to up/down scripts\n"
         "\n"
@@ -254,6 +255,10 @@ int main(int argc, char *argv[])
         }
         case 'M': {
             no_mcast = 1;
+            break;
+        }
+        case 'F': {
+            no_spoof = 1;
             break;
         }
         default: {
